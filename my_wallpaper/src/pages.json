@@ -1,0 +1,245 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/category/index",
+			"style": {
+				"navigationBarTitleText": "分类",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/author/index",
+			"style": {
+				"navigationBarTitleText": "创作者",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/square/index",
+			"style": {
+				"navigationBarTitleText": "广场",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/index",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/search/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/preview/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/preview/preview-detail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"subPackages": [
+		{
+			"root": "pagesCategory",
+			"name": "category",
+			"pages": [
+				{
+					"path": "classify",
+					"style": {
+						"navigationBarTitleText": "壁纸分类",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "phone",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				}
+			]
+		},
+		{
+			"root": "pagesAlbum",
+			"name": "album",
+			"pages": [
+				{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "专辑精选",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "album-detail",
+					"style": {
+						"navigationBarTitleText": "专辑详情",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				}
+			]
+		},
+		{
+			"root": "pagesMy",
+			"name": "my",
+			"pages": [
+				{
+					"path": "likes",
+					"style": {
+						"navigationBarTitleText": "我的喜欢",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "collect",
+					"style": {
+						"navigationBarTitleText": "我的收藏",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "download",
+					"style": {
+						"navigationBarTitleText": "下载记录",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "feedback",
+					"style": {
+						"navigationBarTitleText": "意见反馈",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "profile-edit",
+					"style": {
+						"navigationBarTitleText": "编辑资料",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				}
+			]
+		},
+		{
+			"root": "pagesAuthor",
+			"name": "author",
+			"pages": [
+				{
+					"path": "author-detail",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "create",
+					"style": {
+						"navigationBarTitleText": "创作",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "history",
+					"style": {
+						"navigationBarTitleText": "上传记录",
+						"enablePullDownRefresh": false,
+						"navigationStyle": "custom"
+					}
+				}
+			]
+		},
+		{
+			"root": "pagesOther",
+			"name": "other",
+			"pages": [
+				{
+					"path": "rank",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false
+					}
+				}
+			]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "壁纸",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#333333",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/category/index",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/author/index",
+				"text": "创作者"
+			},
+			{
+				"pagePath": "pages/square/index",
+				"text": "广场"
+			},
+			{
+				"pagePath": "pages/my/index",
+				"text": "我的"
+			}
+		]
+	}
+}

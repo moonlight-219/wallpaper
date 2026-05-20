@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CORS 测试</title>
+</head>
+<body>
+    <h1>CORS 连接测试</h1>
+    <button onclick="testCors()">测试 CORS</button>
+    <button onclick="testDirect()">测试直接访问</button>
+    <pre id="result"></pre>
+
+    <script>
+        const API_BASE = 'http://8.138.110.109:9999/api';
+        
+        async function testCors() {
+            const result = document.getElementById('result');
+            result.textContent = '正在测试 CORS...\n';
+            
+            try {
+                const response = await fetch(`${API_BASE}/home/data`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                result.textContent += `状态码: ${response.status}\n`;
+                result.textContent += `响应头:\n`;
+                for (let [key, value] of response.headers.entries()) {
+                    result.textContent += `  ${key}: ${value}\n`;
+                }
+                
+                const data = await response.json();
+                result.textContent += `\n响应数据:\n${JSON.stringify(data, null, 2)}`;
+            } catch (error) {
+                result.textContent += `错误: ${error.message}\n`;
+                result.textContent += `\n这个错误说明 CORS 配置有问题`;
+            }
+        }
+        
+        function testDirect() {
+            const result = document.getElementById('result');
+            result.textContent = '在新窗口打开 API 地址，查看是否能直接访问...\n';
+            window.open(`${API_BASE}/home/data`, '_blank');
+        }
+    </script>
+</body>
+</html>

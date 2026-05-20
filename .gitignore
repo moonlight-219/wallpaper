@@ -1,0 +1,76 @@
+# ========== 依赖 ==========
+node_modules/
+**/node_modules/
+.m2/
+
+# ========== 构建产物 ==========
+dist/
+build/
+unpackage/
+.vite/
+.output/
+.nuxt/
+
+# ========== 环境变量（含敏感信息，禁止提交） ==========
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+application-prod.yml
+**/application-prod.yml
+
+# ========== 敏感 Token / 密钥文件 ==========
+token.txt
+*.token
+*.secret
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ========== 日志 ==========
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ========== 上传文件（运行时生成） ==========
+uploads/
+public/uploads/
+
+# ========== 运行时 / 缓存 ==========
+.cache/
+.temp/
+*.pid
+*.pid.lock
+coverage/
+.nyc_output/
+
+# ========== IDE ==========
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+.hbuilderx/
+
+# ========== 操作系统 ==========
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ========== 测试临时文件 ==========
+test-upload.*
+*.test.local.*
+
+# ========== 文档（可选，如不想提交说明文档取消注释） ==========
+# *.md

@@ -1,0 +1,58 @@
+server:
+  port: ${SERVER_PORT:9999}
+  address: 0.0.0.0
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: wallpaper-server
+
+  datasource:
+    # 如果 MySQL 和后端在同一台服务器，使用 localhost
+    # 如果 MySQL 在其他服务器，改为 MySQL 服务器的 IP 地址
+    url: jdbc:mysql://${MYSQL_ADDRESS:localhost:3306}/${MYSQL_DATABASE:wallpaper}?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:a123456}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  cache:
+    type: simple
+
+logging:
+  level:
+    com.wallpaper.server: debug
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+
+jwt:
+  secret: ${JWT_SECRET:wallpaper-server-local-jwt-secret-key-for-development-only-256bits}
+  expiration: 15552000000
+
+aliyun:
+  oss:
+    enabled: ${OSS_ENABLED:true}
+    endpoint: ${OSS_ENDPOINT:oss-cn-beijing.aliyuncs.com}
+    access-key-id: ${OSS_ACCESS_KEY_ID:your-access-key-id}
+    access-key-secret: ${OSS_ACCESS_KEY_SECRET:your-access-key-secret}
+    bucket-name: ${OSS_BUCKET_NAME:wallpaper-project}
+    url-prefix: ${OSS_URL_PREFIX:https://wallpaper-project.oss-cn-beijing.aliyuncs.com}
+
+wechat:
+  miniprogram:
+    app-id: ${WECHAT_APP_ID:wx7db99e78f00f1ce0}
+    app-secret: ${WECHAT_APP_SECRET:ee45b17d6eab40877d1b0bef5ff328c3}
